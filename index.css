@@ -156,22 +156,40 @@ p, li {
     border-radius: 10px;
 }
 
-.card {
-    flex: 1;
+#class-notes {
+    height: 30vh;
 }
 
-/* .notes-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+.swiper {
+    height: 225px;
+    width: 100%;
+    position: relative;
 }
 
-.notes {
-    display: block;
+.swiper-slide {
     text-align: center;
-    top: 50%;
-    width: 250px;
-    height: 250px;
-    background-color: white;
-} */
+    max-height: 200px;
+    font-size: 18px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.swiper-pagination {
+    position: absolute;
+}
+
+.swiper-pagination-bullet{
+    background-color: white !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: rgb(175, 226, 255) !important;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    background-color: transparent;
+    color: black !important;
+    transform: translateY(-12.5px);
+}
+
+

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome | Ridho Yusuf</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
 </head>
 <body>
     <header> 
@@ -47,23 +49,40 @@
             
         </div>
 
-        <!-- <div class="content">
-            <h2 class="projects">Projects</h2>
-            <br>
-            <p>Welcome to my page. Make yourself comfortable...</p>
-        </div> -->
-
         <div class="content" id="class-notes">
             <h2 class="class-notes">Class Notes</h2>
             <br>
-            <p>I have some class notes that may be useful to you. Please feel free to take advantage of them :)</p>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">COMP1511</div>
+                    <div class="swiper-slide">COMP1521</div>
+                    <div class="swiper-slide">COMP2521</div>
+                    <div class="swiper-slide">COMP2511</div>
+                    <div class="swiper-slide">COMP3311</div>
+                    <div class="swiper-slide">COMP3331</div>
+                    <div class="swiper-slide">COMP3231</div>
+                    <div class="swiper-slide">COMP6080</div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+
+    
+            
+           
+            
+            <!-- <p>I have some class notes that may be useful to you. Please feel free to take advantage of them :)</p>
             <br>
             <ul>
                 <li><a href="https://ridho-y.github.io/comp2041/" target="_blank"><u>COMP2041</u></a></li>
                 <li><a href="https://ridho-y.github.io/comp3311/" target="_blank"><u>COMP3311</u></a></li>
                 <li><a href="https://ridho-y.github.io/comp6080/" target="_blank"><u>COMP6080</u></a></li>
-            </ul>
-        </div>
+            </ul> -->
+
+
+        
 
         <div class="content" id="contact">
             <h2 class="contact">Let's get in touch</h2>
@@ -72,6 +91,41 @@
         </div>
     </div>
     
+    <!-- <script type="text/javascript" src="build.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 25,
+        loop: true,
+        centerSlide: 'true',
+        fade: 'true',
+        grabCursor: 'true',
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          dynamicBullets: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+    
+        breakpoints:{
+            0: {
+                slidesPerView: 1,
+            },
+            520: {
+                slidesPerView: 2,
+            },
+            950: {
+                slidesPerView: 3,
+            },
+        },
+      });
+      </script>
 
 </body>
 </html>
