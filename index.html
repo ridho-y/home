@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <header> 
@@ -52,21 +54,76 @@
         <div class="content" id="class-notes">
             <h2 class="class-notes">Class Notes</h2>
             <br>
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">COMP1511</div>
-                    <div class="swiper-slide">COMP1521</div>
-                    <div class="swiper-slide">COMP2521</div>
-                    <div class="swiper-slide">COMP2511</div>
-                    <div class="swiper-slide">COMP3311</div>
-                    <div class="swiper-slide">COMP3331</div>
-                    <div class="swiper-slide">COMP3231</div>
-                    <div class="swiper-slide">COMP6080</div>
+            
+            <div class="swiper-container">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide cs1511">
+                            <span>
+                                <h3>COMP1511</h3>
+                                <h4>Programming Fundamentals</h4>
+                                <h5>2020 T2</h5>
+                            </span>
+                        </div>
+                        <div class="swiper-slide cs1521">
+                            <span>
+                                <h3>COMP1521</h3>
+                                <h4>Computer Systems Fundamentals</h4>
+                                <h5>2020 T3</h5>
+                            </span>
+                        </div>
+                        <div class="swiper-slide cs1531">
+                            <span>
+                                <h3>COMP1531</h3>
+                                <h4>Software Engineering Fundamentals</h4>
+                                <h5>2021 T3</h5>
+                            </span>
+                        </div>
+                        <div class="swiper-slide cs2511">
+                            <span>
+                                <h3>COMP2511</h3>
+                                <h4>Object-Oriented Design & Programming</h4>
+                                <h5>2022 T2</h5>
+                            </span>
+                        </div>
+                        <div class="swiper-slide cs2521">
+                            <span>
+                                <h3>COMP2521</h3>
+                                <h4>Data Structures and Algorithms</h4>
+                                <h5>2021 T3</h5>
+                            </span>
+                        </div>
+                        <div class="swiper-slide cs2041">
+                            <span>
+                                <h3>COMP2041</h3>
+                                <h4>Software Construction</h4>
+                                <h5>2022 T2</h5>
+                            </span>
+                        </div>
+                        <div class="swiper-slide cs3311">
+                            <span>
+                                <h3>COMP3311</h3>
+                                <h4>Database Systems</h4>
+                                <h5>2022 T3</h5>
+                            </span>
+                        </div>
+                        <div class="swiper-slide cs6080">
+                            <span>
+                                <h3>COMP6080</h3>
+                                <h4>Web Front-End Programming</h4>
+                                <h5>2023 T1</h5>
+                            </span>
+                        </div>
+                    </div>
                 </div>
                 <div class="swiper-pagination"></div>
+
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
+            
+            
+            
         </div>
 
     
@@ -91,7 +148,7 @@
         </div>
     </div>
     
-    <!-- <script type="text/javascript" src="build.js"></script> -->
+    <script type="text/javascript" src="build.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
@@ -99,10 +156,12 @@
         var swiper = new Swiper(".mySwiper", {
         slidesPerView: 3,
         spaceBetween: 25,
+        speed: 1000,
         loop: true,
         centerSlide: 'true',
         fade: 'true',
-        grabCursor: 'true',
+        // grabCursor: 'true',
+        allowTouchMove: false,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
@@ -124,6 +183,10 @@
                 slidesPerView: 3,
             },
         },
+
+        // autoplay: {
+        //     delay: 5000,
+        // },
       });
       </script>
 

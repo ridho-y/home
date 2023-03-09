@@ -4,10 +4,12 @@
     margin: 0;
     font-family: 'Sora';
     scroll-behavior: smooth;
-    background-color: rgb(17,19,22);
 }
 
+body {
+    background-color: rgb(17,19,22);
 
+}
 .main-container {
     background-color: rgb(17,19,22);
     margin: 0 14%;
@@ -54,6 +56,7 @@ header {
     position: fixed;
     display: block;
     background-color: rgb(17,19,22);
+    z-index: 10;
 }
 
 nav {
@@ -147,6 +150,10 @@ p, li {
     gap: 50px;
 }
 
+.card {
+    flex: 1;
+}
+
 .profile {
     display: block;
     object-fit: contain;
@@ -160,6 +167,13 @@ p, li {
     height: 30vh;
 }
 
+.swiper-container {
+    width: 100%;
+    height: 110%;
+    align-self: center;
+    position: relative;
+}
+
 .swiper {
     height: 225px;
     width: 100%;
@@ -167,12 +181,25 @@ p, li {
 }
 
 .swiper-slide {
-    text-align: center;
     max-height: 200px;
+    text-align: center;
     font-size: 18px;
-    background: #fff;
+    background: rgb(233, 246, 255);
     border-radius: 10px;
+
+    display: flex !important;
+    justify-content: center;
+    align-items: center;    
 }
+
+.swiper-slide:hover {
+    cursor: pointer;
+}
+
+button {
+    border: none;
+}
+
 
 .swiper-pagination {
     position: absolute;
@@ -188,8 +215,30 @@ p, li {
 
 .swiper-button-next, .swiper-button-prev {
     background-color: transparent;
-    color: black !important;
-    transform: translateY(-12.5px);
+    color: rgb(255, 255, 255) !important;
+    --swiper-navigation-size: 30px;
 }
 
+.swiper-button-next {
+    transform: translate(40px, -12.5px);
+}
 
+.swiper-button-prev {
+    transform: translate(-40px, -12.5px);
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+h4 {
+    /* font-style: italic; */
+    font-weight: 300;
+    font-size: 15px;
+    margin: 6px 0 8px 0;
+}
+
+h5 {
+    font-weight: 600;
+}
