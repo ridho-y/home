@@ -215,7 +215,7 @@ button {
 
 .swiper-button-next, .swiper-button-prev {
     background-color: transparent;
-    color: rgb(255, 255, 255) !important;
+    color: rgb(175, 226, 255) !important;
     --swiper-navigation-size: 30px;
 }
 
