@@ -75,4 +75,7 @@ document.querySelector('.email').addEventListener('click', () => {
     location.href = "mailto:hello.ridhoy@gmail.com";
 })
 
-// document.querySelector
+$(document).ready(() => {
+    $('.contact-logo').hover(function() {$(this).css('fill', 'rgb(175, 226, 255)')},
+        function() {$(this).css('fill', 'rgb(233, 246, 255)')})
+})

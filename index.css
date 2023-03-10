@@ -6,6 +6,24 @@
     scroll-behavior: smooth;
 }
 
+/* SCROLL BAR */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(17,19,22);
+}
+
+::-webkit-scrollbar-thumb {
+    background:  rgb(175, 226, 255);
+    border-radius: 8px;
+}
+
+
+
+
 body {
     background-color: rgb(17,19,22);
 
@@ -31,6 +49,7 @@ a, a:visited, a:active {
 .line-animation::after {
     content: "";
     position: absolute;
+    margin-bottom: -2px;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -249,7 +268,11 @@ h5 {
 .contact-logo {
     width: 40px;
     margin-right: 20px;
-    /* filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(121deg) brightness(96%) contrast(101%); */
+    fill: rgb(233, 246, 255);
+}
+
+.contact-logo:hover {
+    cursor: pointer;
 }
 
 .contact {
