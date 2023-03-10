@@ -115,12 +115,20 @@ nav {
 
 }
 
+.name:hover {
+    cursor: pointer;
+}
+
 .menu-items {
     text-align: right;
 }
 
 .menu-item {
     padding: 0 7px;
+}
+
+.menu-item:hover {
+    cursor: pointer;
 }
 
 .main-container {
@@ -184,7 +192,7 @@ p, li {
     border-radius: 10px;
 }
 
-#class-notes {
+#course-notes {
     height: 30vh;
 }
 

@@ -1,3 +1,35 @@
+// Scroll to functionality
+document.querySelector('.name').addEventListener('click', () => {
+    window.scroll({
+        top: 0,
+    });
+})
+
+document.querySelector('.about-me-item').addEventListener('click', () => {
+    const e = document.querySelector('#about-me')
+    const y = e.getBoundingClientRect().top + window.scrollY;
+    window.scroll({
+        top: y,
+    });
+})
+
+document.querySelector('.course-notes-item').addEventListener('click', () => {
+    const e = document.querySelector('#course-notes')
+    const y = e.getBoundingClientRect().top + window.scrollY;
+    window.scroll({
+        top: y,
+    });
+})
+
+document.querySelector('.contact-item').addEventListener('click', () => {
+    const e = document.querySelector('#contact')
+    const y = e.getBoundingClientRect().top + window.scrollY;
+    window.scroll({
+        top: y,
+    });
+})
+
+
 // Carousel for course notes
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,
@@ -79,3 +111,4 @@ $(document).ready(() => {
     $('.contact-logo').hover(function() {$(this).css('fill', 'rgb(175, 226, 255)')},
         function() {$(this).css('fill', 'rgb(233, 246, 255)')})
 })
+
