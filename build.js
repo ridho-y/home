@@ -68,3 +68,11 @@ document.querySelector('.cs3311').addEventListener('click', () => {
 document.querySelector('.cs6080').addEventListener('click', () => {
     open('https://ridho-y.github.io/comp6080/')
 })
+
+// Contact links
+
+document.querySelector('.email').addEventListener('click', () => {
+    location.href = "mailto:hello.ridhoy@gmail.com";
+})
+
+// document.querySelector

@@ -71,7 +71,7 @@ nav {
 
 .name, .menu-items {
     display: inline-block;
-    color: white;
+    color: rgb(233, 246, 255);
     font-size: 15px;
 }
 
@@ -171,7 +171,7 @@ p, li {
 
 .swiper-container {
     width: 100%;
-    height: 110%;
+    height: 225px;
     align-self: center;
     position: relative;
 }
@@ -196,6 +196,7 @@ p, li {
 
 .swiper-slide:hover {
     cursor: pointer;
+    background-color: rgb(175, 226, 255);
 }
 
 button {
@@ -244,3 +245,19 @@ h4 {
 h5 {
     font-weight: 600;
 }
+
+.contact-logo {
+    width: 40px;
+    margin-right: 20px;
+    /* filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(121deg) brightness(96%) contrast(101%); */
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+}
+
+.contact-user {
+    font-size: 20px;
+}
+
