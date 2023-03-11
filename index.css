@@ -17,7 +17,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background:  rgb(175, 226, 255);
+    background:  white;
     border-radius: 8px;
 }
 
@@ -93,7 +93,7 @@ nav {
 
 .name, .menu-items {
     display: inline-block;
-    color: rgb(233, 246, 255);
+    color: white;
     font-size: 15px;
 }
 
@@ -141,7 +141,7 @@ nav {
 
 .hello-world {
     font-size: 75px;
-    color: rgb(233, 246, 255);
+    color:  rgb(233, 246, 255);
 }
 
 .welcome {
@@ -158,11 +158,10 @@ h2 {
     font-size: 50px;
     color: rgb(175, 226, 255);
     font-weight: 600;
-    display: inline;
 }
 
 p, li {
-    color: rgb(233, 246, 255);
+    color: white;
     font-weight: 300;
     line-height: 25px;
 }
@@ -195,7 +194,7 @@ p, li {
 }
 
 .swiper {
-    height: 225px;
+    height: 100%;
     width: 100%;
     position: relative;
 }
@@ -210,6 +209,14 @@ p, li {
     display: flex !important;
     justify-content: center;
     align-items: center;    
+}
+
+.swiper-button-next {
+    transform: translate(40px, -12.5px);
+}
+
+.swiper-button-prev {
+    transform: translate(-40px, -12.5px);
 }
 
 .swiper-slide:hover {
@@ -240,13 +247,7 @@ button {
     --swiper-navigation-size: 30px;
 }
 
-.swiper-button-next {
-    transform: translate(40px, -12.5px);
-}
 
-.swiper-button-prev {
-    transform: translate(-40px, -12.5px);
-}
 
 h3 {
     font-size: 30px;
@@ -266,7 +267,7 @@ h5 {
 .contact-logo {
     width: 40px;
     margin-right: 20px;
-    fill: rgb(233, 246, 255);
+    fill: white;
 }
 
 .contact-logo:hover {
@@ -299,6 +300,7 @@ h5 {
     position: fixed;
     z-index: -1000;
     width: 100vw;
+    /* padding: 0 11%; */
     height: 100vh;
     background-color: rgb(17,19,22);
     text-align: center;
@@ -314,13 +316,13 @@ h5 {
 
 .exit {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 5%;
 }
 
 .exit-icon {
     fill: white;
-    width: 30px;
+    width: 38px;
 }
 
 @media (max-width: 1000px) {
@@ -349,12 +351,62 @@ h5 {
         fill: white;
     }
 
-}
-
-@media (max-width: 500px) {
-
     .profile {
         width: 250px;
     }
 
 }
+
+@media (max-width: 500px) {
+
+    .profile {
+        width: 200px;
+    }
+
+    main {
+        margin: 0 11%;
+    }
+
+    nav {
+        padding: 10px 5%;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: normal;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h1.hello-world {
+        font-size: 50px;
+    }
+
+    p.contact-user.line-animation {
+        font-size: 15px;
+    }
+
+    .contact-logo {
+        width: 30px;
+    }
+
+    .swiper-container {
+        height: 150px;
+    }
+
+    .swiper-slide {
+        max-height: 125px;
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 13px;
+    }
+}
+
