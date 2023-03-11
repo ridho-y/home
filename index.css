@@ -201,6 +201,7 @@ p, li {
 
 .swiper-slide {
     max-height: 200px;
+    width: 90%;
     text-align: center;
     font-size: 18px;
     background: rgb(233, 246, 255);
@@ -373,11 +374,11 @@ h5 {
 
     p {
         font-size: 14px;
-        line-height: normal;
+        line-height: 20px;
     }
 
     h2 {
-        font-size: 30px;
+        font-size: 35px;
     }
 
     h1.hello-world {
@@ -410,3 +411,22 @@ h5 {
     }
 }
 
+@media (max-width: 400px) {
+
+    main {
+        margin: 0 5%;
+    }
+
+    .swiper {
+        width: 80%
+    }
+
+    .swiper-button-next {
+        transform: translate(10px, -12.5px);
+    }
+    
+    .swiper-button-prev {
+        transform: translate(-10px, -12.5px);
+    }
+
+}
