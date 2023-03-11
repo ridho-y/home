@@ -1,3 +1,4 @@
+
 // Scroll to functionality
 document.querySelector('.name').addEventListener('click', () => {
     window.scroll({
@@ -110,5 +111,65 @@ document.querySelector('.email').addEventListener('click', () => {
 $(document).ready(() => {
     $('.contact-logo').hover(function() {$(this).css('fill', 'rgb(175, 226, 255)')},
         function() {$(this).css('fill', 'rgb(233, 246, 255)')})
+});
+
+// Menu item functionality
+const toggleMenuHide = (menuShown) => {
+    if (menuShown) {
+        document.querySelector('#menu-window').style.opacity = 1;
+        document.querySelector('#menu-window').style.zIndex = 1000;
+        document.querySelector('header').style.display = 'none';
+        document.querySelector('main').style.display = 'none';
+    } else {
+        document.querySelector('#menu-window').style.opacity = 0;
+        document.querySelector('#menu-window').style.zIndex = -1000;
+        document.querySelector('header').style.display = 'block';
+        document.querySelector('main').style.display = 'block';
+    }
+}
+
+document.querySelector('.menu-items-rsp').addEventListener('click', () => {
+    toggleMenuHide(true);
 })
 
+document.querySelector('.exit').addEventListener('click', () => {
+    toggleMenuHide(false);
+})
+
+document.querySelector('.menu-window-items .name').addEventListener('click', () => {
+    toggleMenuHide(false);
+    window.scrollTo({
+        top: 0,
+        behavior: 'instant'
+    }); 
+})
+
+document.querySelector('.menu-window-items .about-me-item').addEventListener('click', () => {
+    toggleMenuHide(false);
+    const e = document.querySelector('#about-me')
+    const y = e.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({
+        top: y,
+        behavior: 'instant'
+    }); 
+})
+
+document.querySelector('.menu-window-items .course-notes-item').addEventListener('click', () => {
+    toggleMenuHide(false);
+    const e = document.querySelector('#course-notes')
+    const y = e.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({
+        top: y,
+        behavior: 'instant'
+    }); 
+})
+
+document.querySelector('.menu-window-items .contact-item').addEventListener('click', () => {
+    toggleMenuHide(false);
+    const e = document.querySelector('#contact')
+    const y = e.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({
+        top: y,
+        behavior: 'instant'
+    }); 
+})
