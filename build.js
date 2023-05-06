@@ -99,15 +99,15 @@ document.querySelector('.cs2521').addEventListener('click', () => {
 })
 
 document.querySelector('.cs2041').addEventListener('click', () => {
-    open('https://ridho-y.github.io/comp2041/')
+    open('https://ridho-y.github.io/comp2041-notes/')
 })
 
 document.querySelector('.cs3311').addEventListener('click', () => {
-    open('https://ridho-y.github.io/comp3311/')
+    open('https://ridho-y.github.io/comp3311-notes/')
 })
 
 document.querySelector('.cs6080').addEventListener('click', () => {
-    open('https://ridho-y.github.io/comp6080/')
+    open('https://ridho-y.github.io/comp6080-notes/')
 })
 
 // Contact links
