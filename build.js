@@ -1,43 +1,72 @@
+// Typed functionality
+new Typed('.hello-world', {
+    strings: ['Hello world!', '¡Hola Mundo!', 'Halo Dunia!', 'Bonjour monde!', 'こんにちは世界!','Hej världen!', 'مرحبا بالعالم!', '你好世界!'],
+    startDelay: 250,
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 5000,
+    showCursor: true,
+    loop: true,
+});
 
 // Scroll to functionality
+scrollToItems = ['about-me', 'projects', 'course-notes', 'contact']
+scrollToItems.forEach(sec => {
+    document.querySelector(`.${sec}-item`).addEventListener('click', () => {
+        const e = document.querySelector(`#${sec}`)
+        const y = e.getBoundingClientRect().top + window.scrollY;
+        window.scroll({
+            top: y,
+        });
+    })
+});
+
 document.querySelector('.name').addEventListener('click', () => {
     window.scroll({
         top: 0,
     });
 })
 
-document.querySelector('.about-me-item').addEventListener('click', () => {
-    const e = document.querySelector('#about-me')
-    const y = e.getBoundingClientRect().top + window.scrollY;
-    window.scroll({
-        top: y,
-    });
+// Menu item functionality
+const toggleMenuHide = (menuShown) => {
+    if (menuShown) {
+        document.querySelector('#menu-window').style.opacity = 1;
+        document.querySelector('#menu-window').style.zIndex = 1000;
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.querySelector('#menu-window').style.opacity = 0;
+        document.querySelector('#menu-window').style.zIndex = -1000;
+        document.body.style.overflow = 'auto';
+    }
+}
+
+document.querySelector('.menu-items-rsp').addEventListener('click', () => {
+    toggleMenuHide(true);
 })
 
-document.querySelector('.projects-item').addEventListener('click', () => {
-    const e = document.querySelector('#projects')
-    const y = e.getBoundingClientRect().top + window.scrollY;
-    window.scroll({
-        top: y,
-    });
+document.querySelector('.exit').addEventListener('click', () => {
+    toggleMenuHide(false);
 })
 
-document.querySelector('.course-notes-item').addEventListener('click', () => {
-    const e = document.querySelector('#course-notes')
-    const y = e.getBoundingClientRect().top + window.scrollY;
-    window.scroll({
-        top: y,
-    });
+document.querySelector('.menu-window-items .name').addEventListener('click', () => {
+    toggleMenuHide(false);
+    window.scrollTo({
+        top: 0,
+        behavior: 'instant'
+    }); 
 })
 
-document.querySelector('.contact-item').addEventListener('click', () => {
-    const e = document.querySelector('#contact')
-    const y = e.getBoundingClientRect().top + window.scrollY;
-    window.scroll({
-        top: y,
-    });
+scrollToItems.forEach((sec) => {
+    document.querySelector(`.menu-window-items .${sec}-item`).addEventListener('click', () => {
+        toggleMenuHide(false);
+        const e = document.querySelector(`#${sec}`)
+        const y = e.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+            top: y,
+            behavior: 'instant'
+        }); 
+    })
 })
-
 
 // Carousel for course notes
 var swiper = new Swiper(".mySwiper", {
@@ -77,41 +106,24 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 // Course notes links
+courseNotes = [
+               ['cs1511', 'https://drive.google.com/u/0/uc?id=15BrgL7cfLTBjQjOa2RluiHC3nwYjpi0C&export=download'],
+               ['cs1521', 'https://drive.google.com/u/0/uc?id=1pQJJ74G8B7ZH7wUuM75NNU3xStzlx39Q&export=download'],
+               ['cs1531', 'https://drive.google.com/u/0/uc?id=1pQJJ74G8B7ZH7wUuM75NNU3xStzlx39Q&export=download'],
+               ['cs2511', 'https://drive.google.com/u/0/uc?id=1sVDtycXCAKrjKD-_oaEmL4jwb3lNIiBw&export=download'],
+               ['cs2521', 'https://drive.google.com/u/0/uc?id=1wAnUr9pTg0HLGW_hhWkRDNlknjdNwmwE&export=download'],
+               ['cs2041', 'https://ridho-y.github.io/comp2041-notes/'],
+               ['cs3311', 'https://ridho-y.github.io/comp3311-notes/'],
+               ['cs6080', 'https://ridho-y.github.io/comp6080-notes/'],
+            ]
 
-document.querySelector('.cs1511').addEventListener('click', () => {
-    open('https://drive.google.com/u/0/uc?id=15BrgL7cfLTBjQjOa2RluiHC3nwYjpi0C&export=download')
-})
-
-document.querySelector('.cs1521').addEventListener('click', () => {
-    open('https://drive.google.com/u/0/uc?id=1pQJJ74G8B7ZH7wUuM75NNU3xStzlx39Q&export=download')
-})
-
-document.querySelector('.cs1531').addEventListener('click', () => {
-    open('https://drive.google.com/u/0/uc?id=1ie4rxusR4JtoAngkuSyaLttpZn796DQC&export=download')
-})
-
-document.querySelector('.cs2511').addEventListener('click', () => {
-    open('https://drive.google.com/u/0/uc?id=1sVDtycXCAKrjKD-_oaEmL4jwb3lNIiBw&export=download')
-})
-
-document.querySelector('.cs2521').addEventListener('click', () => {
-    open('https://drive.google.com/u/0/uc?id=1wAnUr9pTg0HLGW_hhWkRDNlknjdNwmwE&export=download')
-})
-
-document.querySelector('.cs2041').addEventListener('click', () => {
-    open('https://ridho-y.github.io/comp2041-notes/')
-})
-
-document.querySelector('.cs3311').addEventListener('click', () => {
-    open('https://ridho-y.github.io/comp3311-notes/')
-})
-
-document.querySelector('.cs6080').addEventListener('click', () => {
-    open('https://ridho-y.github.io/comp6080-notes/')
+courseNotes.forEach(([course, link]) => {
+    document.querySelector(`.${course}`).addEventListener('click', () => {
+        open(link)
+    })
 })
 
 // Contact links
-
 document.querySelector('.email').addEventListener('click', () => {
     location.href = "mailto:hello.ridhoy@gmail.com";
 })
@@ -121,71 +133,15 @@ $(document).ready(() => {
         function() {$(this).css('fill', 'rgb(233, 246, 255)')})
 });
 
-// Menu item functionality
-const toggleMenuHide = (menuShown) => {
-    if (menuShown) {
-        document.querySelector('#menu-window').style.opacity = 1;
-        document.querySelector('#menu-window').style.zIndex = 1000;
-        document.body.style.overflow = 'hidden';
-    } else {
-        document.querySelector('#menu-window').style.opacity = 0;
-        document.querySelector('#menu-window').style.zIndex = -1000;
-        document.body.style.overflow = 'auto';
-    }
-}
-
-document.querySelector('.menu-items-rsp').addEventListener('click', () => {
-    toggleMenuHide(true);
+// Animations
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        // console.log(e)
+        if (e.isIntersecting) {
+            e.target.classList.add('present')
+        }
+    })
 })
 
-document.querySelector('.exit').addEventListener('click', () => {
-    toggleMenuHide(false);
-})
-
-document.querySelector('.menu-window-items .name').addEventListener('click', () => {
-    toggleMenuHide(false);
-    window.scrollTo({
-        top: 0,
-        behavior: 'instant'
-    }); 
-})
-
-document.querySelector('.menu-window-items .about-me-item').addEventListener('click', () => {
-    toggleMenuHide(false);
-    const e = document.querySelector('#about-me')
-    const y = e.getBoundingClientRect().top + window.scrollY;
-    window.scrollTo({
-        top: y,
-        behavior: 'instant'
-    }); 
-})
-
-document.querySelector('.menu-window-items .projects-item').addEventListener('click', () => {
-    toggleMenuHide(false);
-    const e = document.querySelector('#projects')
-    const y = e.getBoundingClientRect().top + window.scrollY;
-    window.scrollTo({
-        top: y,
-        behavior: 'instant'
-    }); 
-})
-
-document.querySelector('.menu-window-items .course-notes-item').addEventListener('click', () => {
-    toggleMenuHide(false);
-    const e = document.querySelector('#course-notes')
-    const y = e.getBoundingClientRect().top + window.scrollY;
-    window.scrollTo({
-        top: y,
-        behavior: 'instant'
-    }); 
-})
-
-document.querySelector('.menu-window-items .contact-item').addEventListener('click', () => {
-    toggleMenuHide(false);
-    const e = document.querySelector('#contact')
-    const y = e.getBoundingClientRect().top + window.scrollY;
-    window.scrollTo({
-        top: y,
-        behavior: 'instant'
-    }); 
-})
+const animatedItems = document.querySelectorAll('.animated-item');
+animatedItems.forEach(ai => observer.observe(ai));
