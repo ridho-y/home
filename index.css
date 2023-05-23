@@ -3,7 +3,8 @@
 :root {
     --primary: rgb(175, 226, 255);
     --secondary: rgb(233, 246, 255);
-    --dark: rgb(17,19,22); 
+    /* --dark: rgb(17,19,22);  */
+    --dark: green;
 }
 
 * {
