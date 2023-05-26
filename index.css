@@ -108,12 +108,14 @@ nav {
 
 .external-link {
     width: 24px;
+    height: 24px;
     fill: var(--lightgrey);
     cursor: pointer;
 }
 
 .github-link {
     width: 27px;
+    height: 27px;
     fill: var(--lightgrey);
     cursor: pointer;
 }
