@@ -4,6 +4,7 @@
     --primary: rgb(175, 226, 255);
     --secondary: rgb(233, 246, 255);
     --dark: rgb(17,19,22); 
+    --lightgrey: rgb(36, 36, 36);
 }
 
 * {
@@ -90,6 +91,31 @@ nav {
     align-items: center;
     padding: 10px 14%;
     background-color: var(--dark);
+}
+
+.project-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-links {
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+}
+
+.external-link {
+    width: 24px;
+    fill: var(--lightgrey);
+    cursor: pointer;
+}
+
+.github-link {
+    width: 27px;
+    fill: var(--lightgrey);
+    cursor: pointer;
 }
 
 .menu-items {
@@ -260,7 +286,7 @@ button {
 
 
 h3 {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 600;
 }
 
@@ -348,11 +374,6 @@ h5 {
     flex-direction: column;
     position: relative;
     transition: 0.3s
-}
-
-.project-card:hover {
-    cursor: pointer;
-    transform: translate(0, -10px);
 }
 
 .project-thumbnail {
