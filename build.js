@@ -107,11 +107,11 @@ var swiper = new Swiper(".mySwiper", {
 
 // Course notes links
 courseNotes = [
-               ['cs1511', 'https://drive.google.com/u/0/uc?id=15BrgL7cfLTBjQjOa2RluiHC3nwYjpi0C&export=download'],
-               ['cs1521', 'https://drive.google.com/u/0/uc?id=1pQJJ74G8B7ZH7wUuM75NNU3xStzlx39Q&export=download'],
-               ['cs1531', 'https://drive.google.com/u/0/uc?id=1ie4rxusR4JtoAngkuSyaLttpZn796DQC&export=download'],
-               ['cs2511', 'https://drive.google.com/u/0/uc?id=1_Q3hVKk6dEYVQNVZIA89_iyzsOP1UhYE&export=download'],
-               ['cs2521', 'https://drive.google.com/u/0/uc?id=1wAnUr9pTg0HLGW_hhWkRDNlknjdNwmwE&export=download'],
+               ['cs1511', 'https://ridho.blob.core.windows.net/files/comp1511.pdf'],
+               ['cs1521', 'https://ridho.blob.core.windows.net/files/comp1521.pdf'],
+               ['cs1531', 'https://ridho.blob.core.windows.net/files/comp1531.pdf'],
+               ['cs2511', 'https://ridho.blob.core.windows.net/files/comp2511.pdf'],
+               ['cs2521', 'https://ridho.blob.core.windows.net/files/comp2521.pdf'],
                ['cs2041', 'https://ridho-y.github.io/comp2041-notes/'],
                ['cs3311', 'https://ridho-y.github.io/comp3311-notes/'],
                ['cs6080', 'https://ridho-y.github.io/comp6080-notes/'],
