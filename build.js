@@ -107,11 +107,11 @@ var swiper = new Swiper(".mySwiper", {
 
 // Course notes links
 courseNotes = [
-               ['cs1511', 'https://ridho.blob.core.windows.net/files/comp1511.pdf'],
-               ['cs1521', 'https://ridho.blob.core.windows.net/files/comp1521.pdf'],
-               ['cs1531', 'https://ridho.blob.core.windows.net/files/comp1531.pdf'],
-               ['cs2511', 'https://ridho.blob.core.windows.net/files/comp2511.pdf'],
-               ['cs2521', 'https://ridho.blob.core.windows.net/files/comp2521.pdf'],
+               ['cs1511', 'https://ridho-website.s3.ap-southeast-2.amazonaws.com/comp1511.pdf'],
+               ['cs1521', 'https://ridho-website.s3.ap-southeast-2.amazonaws.com/comp1521.pdf'],
+               ['cs1531', 'https://ridho-website.s3.ap-southeast-2.amazonaws.com/comp1531.pdf'],
+               ['cs2511', 'https://ridho-website.s3.ap-southeast-2.amazonaws.com/comp2511.pdf'],
+               ['cs2521', 'https://ridho-website.s3.ap-southeast-2.amazonaws.com/comp2521.pdf'],
                ['cs2041', 'https://ridho-y.github.io/comp2041-notes/'],
                ['cs3311', 'https://ridho-y.github.io/comp3311-notes/'],
                ['cs6080', 'https://ridho-y.github.io/comp6080-notes/'],
