@@ -107,11 +107,11 @@ var swiper = new Swiper(".mySwiper", {
 
 // Course notes links
 courseNotes = [
-               ['cs1511', 'https://kkoavulaagmpxqirctzg.supabase.co/storage/v1/object/public/course-notes/comp1511.pdf'],
-               ['cs1521', 'https://kkoavulaagmpxqirctzg.supabase.co/storage/v1/object/public/course-notes/comp1521.pdf'],
-               ['cs1531', 'https://kkoavulaagmpxqirctzg.supabase.co/storage/v1/object/public/course-notes/comp1531.pdf'],
-               ['cs2511', 'https://kkoavulaagmpxqirctzg.supabase.co/storage/v1/object/public/course-notes/comp2511.pdf'],
-               ['cs2521', 'https://kkoavulaagmpxqirctzg.supabase.co/storage/v1/object/public/course-notes/comp2521.pdf'],
+               ['cs1511', 'https://normefbsydaafbkdjchx.supabase.co/storage/v1/object/public/website//comp1511.pdf'],
+               ['cs1521', 'https://normefbsydaafbkdjchx.supabase.co/storage/v1/object/public/website//comp1521.pdf'],
+               ['cs1531', 'https://normefbsydaafbkdjchx.supabase.co/storage/v1/object/public/website//comp1531.pdf'],
+               ['cs2511', 'https://normefbsydaafbkdjchx.supabase.co/storage/v1/object/public/website//comp2511.pdf'],
+               ['cs2521', 'https://normefbsydaafbkdjchx.supabase.co/storage/v1/object/public/website//comp2521.pdf'],
                ['cs2041', 'https://ridho-y.github.io/comp2041-notes/'],
                ['cs3311', 'https://ridho-y.github.io/comp3311-notes/'],
                ['cs6080', 'https://ridho-y.github.io/comp6080-notes/'],
